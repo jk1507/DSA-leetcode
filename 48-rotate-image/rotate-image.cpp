@@ -4,11 +4,21 @@ public:
         int sizeofMatrix=matrix.size();
         for(int i=0;i<sizeofMatrix;i++){
             for(int j=i+1;j<sizeofMatrix;j++){
-                swap(matrix[i][j],matrix[j][i]);
+                int temp=matrix[i][j];
+                matrix[i][j]=matrix[j][i];
+                matrix[j][i]=temp;
             }
         }
         for(int i=0;i<sizeofMatrix;i++){
-            reverse(matrix[i].begin(),matrix[i].end());
+            int low=0;
+            int high=sizeofMatrix-1;
+            while(low<high){
+                int exchange=matrix[i][low];
+                matrix[i][low]=matrix[i][high];
+                matrix[i][high]=exchange;
+            low++;
+            high--;
+            }
         }
     }
 };
