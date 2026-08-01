@@ -9,6 +9,7 @@ public:
     }
     int diagonalPrime(vector<vector<int>>& nums) {
         int n=nums.size();
+        cout<<n;
         int ans=0;
         for(int i=0;i<n;i++){
             if(isprime(nums[i][i])){
