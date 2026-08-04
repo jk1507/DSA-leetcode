@@ -7,7 +7,6 @@ public:
                 factorStore.push_back(i);
             }
         }
-        sort(factorStore.begin(),factorStore.end());
         int size=factorStore.size();
         if(size<k) return -1;
         return factorStore[k-1];
