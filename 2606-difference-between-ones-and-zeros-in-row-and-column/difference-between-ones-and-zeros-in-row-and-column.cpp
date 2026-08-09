@@ -41,8 +41,8 @@ public:
     }*/
     int m=grid.size();
     int n=grid[0].size();
-    vector<int> OneRow(m,0);
-    vector<int> OneCol(n,0);
+    vector<int> OneRow(m);
+    vector<int> OneCol(n);
     for(int i=0;i<m;i++){
         for(int j=0;j<n;j++){
             if(grid[i][j]==1){
