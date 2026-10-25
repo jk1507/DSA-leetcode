@@ -8,7 +8,6 @@ public:
             }
             i++;
         }
-        if(j==str2.length()) return true;
-        return false;
+        return j==str2.length();
     }
 };
