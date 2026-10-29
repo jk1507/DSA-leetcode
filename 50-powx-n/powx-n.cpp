@@ -1,7 +1,7 @@
 class Solution {
 public:
 
-    long double power(long double x, long long n) {
+    /*long double power(long double x, long long n) {
         if (n == 0)
             return 1.0L;
 
@@ -12,10 +12,11 @@ public:
 
         return x * result * result;
     }
+    */
 
     double myPow(double x, int n) {
 
-        long long N = n;
+        /*long long N = n;
 
         long double X = x;
 
@@ -25,5 +26,8 @@ public:
         }
 
         return (double)power(X, N);
+        */
+         return pow(x,n);
     }
+   
 };
