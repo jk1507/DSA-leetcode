@@ -6,11 +6,11 @@ public:
         int mid=first+(last-first)/2;
         while(first<last){
             mid=first+(last-first)/2;
-            if(nums[mid]>nums[mid+1]){
-                last=mid;
+            if(nums[mid]<nums[mid+1]){
+                first=mid+1;
             }
             else{
-                first=mid+1;
+                last=mid;
             }
         }
         /*return nums[mid];
