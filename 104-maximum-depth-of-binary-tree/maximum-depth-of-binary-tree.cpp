@@ -11,8 +11,18 @@
  */
 class Solution {
 public:
+    int depth(TreeNode* root){
+        if(root==NULL){
+            return 0;
+        }
+        int left=depth(root->left);
+        int right=depth(root->right);
+        return 1+max(left,right);
+    }
     int maxDepth(TreeNode* root) {
-        queue<TreeNode*> x;
+        int x=depth(root);
+        return x;
+        /*queue<TreeNode*> x;
         int depth=0;
         if(root==NULL){
             return 0;
@@ -33,5 +43,6 @@ public:
             }
         }
         return depth;
+        */
     }
 };
